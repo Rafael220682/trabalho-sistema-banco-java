@@ -2,27 +2,26 @@ package conta;
 
 public class ContaCorrente extends Conta {
 	
-	private String tipoConta;
+	private int tipoConta = 1;
 	
 	
 	//construtores
 	public ContaCorrente() {
-		super();
+		
 	}
-	
-	public ContaCorrente(int numeroConta, int agencia, double saldo, Cliente cliente, String tipoConta) {
-		super(numeroConta, agencia, saldo, cliente);
-		this.tipoConta = tipoConta;
+
+	public ContaCorrente(int numeroConta, int agencia, double saldo, String nome, String cpf, String senha) {
+		setNumeroConta(numeroConta);
+		setAgencia(agencia);
+		setSaldo(saldo);
+		setNome(nome);
+		setCpf(cpf);
+		setSenha(senha);
 	}
 
 	//getters e setters
-	public String getTipoConta() {
+	public int getTipoConta() {
 		return tipoConta;
 	}
-
-	public void setTipoConta(String tipoConta) {
-		this.tipoConta = tipoConta;
-	}
-	
 	
 }
